@@ -107,7 +107,7 @@ _(Fill this in honestly based on what you actually used — for example:)_
 
 ## Notes
 
-- Data is scoped per-device via Firebase Anonymous Authentication —
+- Data is scoped per-device via Firebase Anonymous Authentication 
   there's no login screen, but each installation gets its own private
   set of expenses, enforced server-side by `firestore.rules`.
 - The category list is a fixed set (`lib/models/expense.dart`) rather
