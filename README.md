@@ -1,8 +1,5 @@
-# Expense Tracker (Flutter + Firebase)
+# Expense Tracker (Flutter & Firebase)
 
-A simple, clean expense tracker built with Flutter and Firebase Firestore.
-Built as a practical task submission for the CyphLab Flutter Developer
-Internship.
 
 ## Features Implemented
 
@@ -104,5 +101,6 @@ flutter build apk --release
 - Data is scoped per-device via Firebase Anonymous Authentication 
   there's no login screen, but each installation gets its own private
   set of expenses, enforced server-side by `firestore.rules`.
+  
 - The category list is a fixed set (`lib/models/expense.dart`) rather
   than user-defined, to keep the scope focused on the core requirements.
