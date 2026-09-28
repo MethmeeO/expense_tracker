@@ -53,8 +53,7 @@ lib/
 - Node.js (only needed to install the Firebase CLI in step 2)
 
 ### 2. Create the Firebase project and connect it
-This project ships with a **placeholder** `lib/firebase_options.dart` —
-you must replace it with your own, or the app won't build.
+This project ships with a placeholder `lib/firebase_options.dart`
 
 ```bash
 # one-time global installs
@@ -74,12 +73,14 @@ When `flutterfire configure` asks which platforms to support, choose at
 least Android (fastest to test on an emulator).
 
 ### 3. Enable Firestore and Anonymous Auth in the Firebase Console
-- Console → Build → **Firestore Database** → Create database (test mode
-  is fine to start; production rules are provided in `firestore.rules` —
+- Console → Build - Firestore Database - Create database .
+  
+- (test mode is fine to start; production rules are provided in `firestore.rules` —
   deploy them with `firebase deploy --only firestore:rules`, or paste
   them into the Rules tab in the console).
-- Console → Build → **Authentication** → Sign-in method → enable
-  **Anonymous**.
+  
+- Console - Build - Authentication → Sign-in method → enable
+
 
 ### 4. Install packages and run
 ```bash
@@ -95,16 +96,9 @@ flutter build apk --release
 
 ## AI Tools Used
 
-_(Fill this in honestly based on what you actually used — for example:)_
-
-- Used Claude to scaffold the initial project structure (models, Firestore
-  service layer, Provider-based state management, screens, and widgets),
-  then reviewed, ran, and adjusted the generated code myself.
-- Used Claude to help design the Firestore security rules that scope
-  each user's expenses to their own anonymous auth `uid`.
-- [Add anything else you personally used it for, or other tools like
-  GitHub Copilot / ChatGPT, and what each helped with.]
-
+- Gemini: Acted as the primary AI coding collaborator throughout the project, helping scaffold the app architecture, build out Flutter screens and widgets, configure Provider state management, write form validations, and troubleshoot code.
+- Claude:Used occasionally for supplementary code reviews, and refining specific logic.
+- 
 ## Notes
 
 - Data is scoped per-device via Firebase Anonymous Authentication 
