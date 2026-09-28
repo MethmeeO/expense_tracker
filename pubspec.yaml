@@ -1,0 +1,36 @@
+name: expense_tracker
+description: A simple and clean expense tracker app built with Flutter and Firebase.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # Firebase
+  firebase_core: ^2.27.0
+  cloud_firestore: ^4.15.5
+  firebase_auth: ^4.17.5
+
+  # State management
+  provider: ^6.1.2
+
+  # Utilities
+  intl: ^0.19.0
+  uuid: ^4.3.3
+  shared_preferences: ^2.2.2
+
+  # Simple chart for category/monthly breakdown
+  fl_chart: ^0.66.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true

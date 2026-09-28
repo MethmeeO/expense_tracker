@@ -1,0 +1,14 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Each expense document carries a `uid` field. Users can only
+    // read/write documents whose uid matches their own signed-in uid
+    // (anonymous auth still gives every device a stable uid).
+    match /expenses/{expenseId} {
+      allow read, update, delete: if request.auth != null
+                                    && request.auth.uid == resource.data.uid;
+      allow create: if request.auth != null
+                     && request.auth.uid == request.resource.data.uid;
+    }
+  }
+}
